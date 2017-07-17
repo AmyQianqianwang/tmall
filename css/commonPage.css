@@ -1,0 +1,178 @@
+body{
+    font-size: 12px;
+    font-family: arial; 
+    /*Arial可以保证￥的显示*/
+    min-width:990px;
+}
+a{
+    color: #999;
+}
+a:hover{
+    text-decoration: none;
+    /*去掉hover状态的下划线*/
+    color:#FF0036 !important;
+}
+.redColor{
+	color: #FF0036 !important;
+}
+.pull-right{
+    float: right !important;
+}
+
+/*顶部登录导航************************************************************************/
+nav.topBar{
+    height: 32px;
+    line-height: 32px;
+    background-color: #f2f2f2;
+    padding-bottom: 1px solid #e7e7e7;  
+   /*下边缘有1个像素的实线边框，颜色是比背景色略深*/
+}
+ nav.topBar a, nav.topBar span{
+    margin: 0 10px; 
+    font-size: 12px/1.5;
+    color: #999;
+}
+nav.topBar i{
+    margin: 0 2px;
+}
+.bottomTriangle{
+    border: 4px solid transparent;
+    border-top: 4px solid;
+    color: #999;
+    
+    position: absolute;
+    top: 15px;
+    margin-left: 0;
+}
+
+/*首页搜索框************************************************************************/
+.search-input{
+    background-color: #FF0036;
+    width: 625px;
+    /*margin-top: 38px !important;*/
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+.search-input input{
+    width: 485px;
+    height: 36px;
+    margin: 1px;
+    /*让输入框和边框之间有很小的空隙*/
+    outline: none;
+    /*去掉输入框轮廓，否则获取焦点的时候会发生颜色变化*/
+    border: 1px solid transparent;
+    /*边框设置成透明的，否则会有边框阴影*/
+}
+.search-input button{
+    width: 132px;
+    border: 1px solid transparent;
+    /*边框设置成透明的，否则会有边框阴影*/
+    background-color: #FF0036;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    height: 36px;
+}
+.search-input .search-below{
+    margin-top:3px;
+    margin-left:-20px;
+}
+.search-below{
+    padding-left: 10px;
+}
+.search-below a{
+    padding: 0 10px;
+    font-size:14px;
+}
+.logo{
+    position:absolute;
+    left:0;
+    top:46px;
+    z-index:-1;
+    /*放在下面，免得图片挡住了输入框*/
+    width:200px;
+    height:130px;
+    margin: 1px 25px;
+    padding-bottom: 10px;
+}
+/*底部保障************************************************************************/
+.footer{
+    margin:0 0;
+    border-top-style:solid;
+    border-top-width:1px;
+    border-top-color: #e7e7e7;
+}
+.tmall-ensure{
+    margin-top:25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.tmall-ensure img{
+    width: 1280px;
+    height: 154px;
+}
+.tmall-desc{
+    border-top-style:solid;
+    border-top-width:1px;
+    border-top-color: #e7e7e7;
+    padding-top:30px;
+    margin:0 50px;
+}
+.tmall-desc .descCol{
+    width:20%;
+    float:left;
+    padding-left:15px;
+}
+.tmall-desc .descCol .descColTitle{
+    color: #646464;
+    font-size:16px;
+    font-weight: bold;
+    width: 252px;
+    margin: 0 auto;
+    line-height: 18px;
+    height: 18px;
+}
+.tmall-desc a{
+    display:block;
+    padding-top:3px;
+}
+/*底部版权************************************************************************/
+.tmall-copyright{
+    background-color: black;
+    border-top-style:solid;
+    border-top-width:2px;
+    border-top-color: #FF0036;
+    padding-left: 30px;
+}
+.tmall-copyright .footer_link{
+    padding:10px 0;
+    margin-left:10px;
+    color: #fff;
+}
+.tmall-copyright .footer_link a{
+    color:#fff;
+    padding-right: 5px;
+}
+.tmall-copyright .license{
+    margin-left:10px;
+    padding-bottom: 20px;  
+}
+.tmall-copyright .license span{
+    color:#a4a4a4; 
+    padding-right:65px;  
+}
+.tmall-copyright .license .copyRightYear{
+    margin:10px 0;
+    color:#686868;
+}
+.tmall-copyright .license img{
+    width:20px;
+    height:20px;
+}
+
+img.cateye{
+    margin-left:80px;
+}
+
