@@ -13,6 +13,13 @@ img.catear {
 }
 .productCategory-carousel .product-headbar{
     background-color: #ff0036 ;
+    width: 100%;
+    text-align: center;
+
+}
+.productCategory-carousel .product-headbar .headbarWrap{
+     width: 1280px;
+     display: inline-block;
 }
 .productCategory-carousel .product-headbar .p-left{
     width:200px;
@@ -71,21 +78,35 @@ img.catear {
     width:200px;
     height: 500px;
     background-color: #e2e2e3;
-    margin-left: 10px;
+    margin-left: 23px;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 1px;
+    top: 37px;
     z-index: 1;
     /*这个菜单会和轮播重叠在一起，为了使它菜单变得可以点击，使用z-index,把它放在"上面"*/
 }
-.category-menu-left :hover{
-    color:#e54077 !important;
+.categoryMenuItem:hover{
+    background:white;
 }
+.categoryMenuItem:nth-child(odd):hover{
+    color:#e54077;
+}
+.categoryMenuItem:nth-child(odd):hover a{
+    color:#e54077;
+} 
+.categoryMenuItem:nth-child(even):hover{
+    color:#427def;
+}
+.categoryMenuItem:nth-child(even):hover a{
+    color:#427def;
+}
+/*这样就解决了点击菜单，会变蓝色，只有点击a标签才变红的问题。。。*/
+
 .category-menu-left a{
     color: #000;
 }
 .category-menu-left a:hover{
-    color:#e54077 !important;
+    color:#e54077;
     text-decoration: none;
 }
 .category-menu-left .categoryMenuItem{
@@ -153,6 +174,7 @@ img.catear {
     font-size: 18px;
     color: #ff0036;
     overflow: hidden;
+    width: 1280px;
 }
 .personalAction .personalAction-title i{
    display: inline-block;
@@ -162,6 +184,8 @@ img.catear {
 }
 .personalAction .personalAction-top{
     position: relative;
+    width: 1280px;
+    margin: 0 auto;
 }
 .personalAction .leftLine{
     border-bottom: 1px solid;
@@ -184,7 +208,9 @@ img.catear {
 
 .personalAction .personalAction-content{
     padding-right: 10px;
-     overflow: hidden;
+    overflow: hidden;
+    width:1280px;
+    display: inline-block;
 }
 .personalAction .personalAction-content img{
         width:20%;
@@ -232,22 +258,33 @@ img.catear {
     float: left;
     cursor: pointer;
 }
-.left-markLine1{
+.left-markLine{
     display: inline-block;
     height: 20px;
     vertical-align: top;
     /*垂直居顶*/
     width: 5px;
-    background-color:#e54077; 
+    /*background-color:#EA5F8D; */
 }
-.left-markLine2{
-    display: inline-block;
-    height: 20px;
-    vertical-align: top;
-    /*垂直居顶*/
-    width: 5px;
+.image-categoryItem:nth-child(1) .left-markLine{
+    background-color:#EA5F8D; 
+}
+.image-categoryItem:nth-child(2) .left-markLine{
+    background-color:#64C333; 
+}
+.image-categoryItem:nth-child(3) .left-markLine{
+    background-color:#0AA6E8; 
+}
+.image-categoryItem:nth-child(4) .left-markLine{
+    background-color:#F15453; 
+}
+.image-categoryItem:nth-child(5) .left-markLine{
     background-color:#19C8A9; 
 }
+.image-categoryItem:nth-child(6) .left-markLine{
+    background-color:#F7A945; 
+}
+/* p:nth-child(6). css3选择器，选择其父元素的第n个子元素的属性，所以 left-markLine要放在后面。因为image-categoryItem才有公共父元素*/
 .image-categoryList .image-categoryTitle{
     font-size: 16px;
     margin-left: 10px;
@@ -387,3 +424,17 @@ img.endImg{
     /*定宽块状元素，水平居中*/
 }
 
+
+/*右侧固定导航栏************************************************************************/
+.rightFixed{
+    background-color: black;
+    position: fixed;
+    right:0;
+    height: 100%;
+    z-index: 999;
+    width: 35px;
+}
+
+
+
+/*天猫官网用了媒体查询的，图片宽度，随着屏幕宽度在变。搜索栏下方的关键字个数也随着屏幕宽度在变*/

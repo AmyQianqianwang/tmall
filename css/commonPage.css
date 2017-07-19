@@ -2,15 +2,22 @@ body{
     font-size: 12px;
     font-family: arial; 
     /*Arial可以保证￥的显示*/
-    min-width:990px;
+    min-width:1100px;
+    overflow: auto; 
+    /*默认是visible，全部可见，一直延伸屏幕。hidden是超出部分裁剪掉。auto是出滚动条，以显示全部*/
 }
 a{
     color: #999;
 }
-a:hover{
+ a:hover{
     text-decoration: none;
-    /*去掉hover状态的下划线*/
+    /*去掉hover状态的下划线*/  
+}
+nav.topBar a:hover{
     color:#FF0036 !important;
+}
+.search-below a:hover{
+    color:#999 !important;
 }
 .redColor{
 	color: #FF0036 !important;
@@ -35,6 +42,7 @@ nav.topBar{
 nav.topBar i{
     margin: 0 2px;
 }
+
 .bottomTriangle{
     border: 4px solid transparent;
     border-top: 4px solid;
@@ -42,7 +50,43 @@ nav.topBar i{
     
     position: absolute;
     top: 15px;
+    right: 0;
     margin-left: 0;
+    transform-origin: 50% 20%;
+    /*相对于某一点进行旋转，模仿天猫官网设置的*/
+    transition: all .3s ease; 
+    /*旋转在0.3秒内完成*/
+}
+.relativeDiv{
+    position: relative;
+}
+.menuTaobaoList{
+   display: none;
+   position: absolute;
+   top: 32px;
+   left: 0;
+}
+
+nav.topBar .smallTransform{
+    display: inline-block;
+    position: relative;
+    padding-right: 14px;
+}
+nav.topBar .smallTransform:hover .bottomTriangle{
+    transform: rotate(180deg);
+    /*小三角形旋转180度*/
+    /*会继承bottomTriangle中的样式，不用重写了，写到上面，是为了能旋转回去
+    transform-origin: 50% 20%;
+    transition: all .3s ease;*/
+}
+
+nav.topBar .smallTransform:hover .menuTaobaoList{
+  display: block !important;
+  border: 1px solid grey;
+}
+nav.topBar .smallTransform:hover{
+  background: white;
+  text-decoration: underline;
 }
 
 /*首页搜索框************************************************************************/
@@ -54,6 +98,7 @@ nav.topBar i{
     padding: 1px;
     height: 40px;
     display: block;
+    /*line-height: 36px;*/
 }
 .search-input input{
     width: 485px;
@@ -64,6 +109,8 @@ nav.topBar i{
     /*去掉输入框轮廓，否则获取焦点的时候会发生颜色变化*/
     border: 1px solid transparent;
     /*边框设置成透明的，否则会有边框阴影*/
+     vertical-align: middle;
+
 }
 .search-input button{
     width: 132px;
@@ -74,6 +121,7 @@ nav.topBar i{
     font-size:20px;
     font-weight:bold;
     height: 36px;
+    vertical-align: middle;
 }
 .search-input .search-below{
     margin-top:3px;
@@ -95,7 +143,7 @@ nav.topBar i{
     width:200px;
     height:130px;
     margin: 1px 25px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 /*底部保障************************************************************************/
 .footer{
