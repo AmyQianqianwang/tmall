@@ -1,5 +1,5 @@
 // *轮播图头部导航猫耳朵特效**************************************************************
-$(".p-right span").mouseenter(function () {
+$(".title-right span").mouseenter(function () {
     var left = $(this).position().left;
     var top = $(this).position().top;
     var width = $(this).css("width");
@@ -15,7 +15,7 @@ $(".p-right span").mouseenter(function () {
 });
 // 监听菜单鼠标移入事件mouseenter，当鼠标移入的时候，获取当前span的左，上和宽度信息。根据这些信息，计算出猫耳朵应该出现的位置。
 // 然后通过css设置猫耳朵的left和top数据，最后使用fadeIn(500)，在半秒内淡入猫耳朵图片。
-$(".p-right span").mouseleave(function () {
+$(".title-right span").mouseleave(function () {
     $("img#catear").hide();
 });
 // 鼠标移出的时候，隐藏猫耳朵。不用fadeOut是因为，一边慢慢淡出，一边慢慢淡入，两个同时出现，效果不好看。

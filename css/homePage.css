@@ -14,14 +14,14 @@ img.catear {
 .productCategory-carousel .product-headbar{
     background-color: #ff0036 ;
     width: 100%;
-    text-align: center;
+    /*text-align: center;*/
 
 }
 .productCategory-carousel .product-headbar .headbarWrap{
      width: 1280px;
      display: inline-block;
 }
-.productCategory-carousel .product-headbar .p-left{
+.productCategory-carousel .product-headbar .title-left{
     width:200px;
     background-color: #e22127;
     height: 36px;
@@ -39,19 +39,19 @@ img.catear {
 .margin-left-8{
     margin-left: 8px;
 }
-.productCategory-carousel .product-headbar .p-right{
+.productCategory-carousel .product-headbar .title-right{
     display: inline-block;
     padding-left: 15px;
 }
-.productCategory-carousel .product-headbar .p-right a{
+.productCategory-carousel .product-headbar .title-right a{
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
-.productCategory-carousel .product-headbar .p-right span{
+.productCategory-carousel .product-headbar .title-right span{
     padding: 0 15px;
 }
-.productCategory-carousel .product-headbar .p-right img{
+.productCategory-carousel .product-headbar .title-right img{
     height: 36px;
 }
 /*轮播图************************************************************************/
@@ -74,16 +74,23 @@ img.catear {
     z-index: -1;
 }
 /*商品分类菜单及相应推荐列表************************************************************************/
+/*.category-leftList .category-rightDetail{
+    position: absolute;
+    top:0;
+    left:0;
+}*/
 .category-menu-left{
     width:200px;
     height: 500px;
     background-color: #e2e2e3;
-    margin-left: 23px;
+    margin-left: 9px;
     position: absolute;
     left: 1px;
     top: 37px;
     z-index: 1;
     /*这个菜单会和轮播重叠在一起，为了使它菜单变得可以点击，使用z-index,把它放在"上面"*/
+    text-align:left;
+    
 }
 .categoryMenuItem:hover{
     background:white;
@@ -127,10 +134,10 @@ img.catear {
     width: 800px;
     height: 500px;
     background-color: white;
-    margin-left: 210px;
+    margin-left: 208px;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 1px;
+    top: 37px;
     z-index: 1;
     display: none;
 }

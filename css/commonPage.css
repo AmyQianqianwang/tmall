@@ -60,19 +60,25 @@ nav.topBar i{
 .relativeDiv{
     position: relative;
 }
-.menuTaobaoList{
-   display: none;
-   position: absolute;
-   top: 32px;
-   left: 0;
-}
 
-nav.topBar .smallTransform{
+
+nav.topBar .myTaobao{
     display: inline-block;
     position: relative;
     padding-right: 14px;
 }
-nav.topBar .smallTransform:hover .bottomTriangle{
+nav.topBar .menuTaobaoList{
+   display: none;
+   position: absolute;
+   top: 32px;
+   left: 0;
+   width: 100px;
+}
+nav.topBar .myTaobao:hover{
+  background: white;
+  text-decoration: underline;
+}
+nav.topBar .myTaobao:hover .bottomTriangle{
     transform: rotate(180deg);
     /*小三角形旋转180度*/
     /*会继承bottomTriangle中的样式，不用重写了，写到上面，是为了能旋转回去
@@ -80,14 +86,25 @@ nav.topBar .smallTransform:hover .bottomTriangle{
     transition: all .3s ease;*/
 }
 
-nav.topBar .smallTransform:hover .menuTaobaoList{
+nav.topBar .myTaobao:hover .menuTaobaoList{
   display: block !important;
-  border: 1px solid grey;
+  border: solid #eee;
+  border-width: 0 1px 1px;
+  z-index: 998;
+  background: #fff;
 }
-nav.topBar .smallTransform:hover{
-  background: white;
-  text-decoration: underline;
+nav.topBar .myTaobao .menuTaobaoList a:hover{
+    text-decoration: underline;
 }
+nav.topBar .myTaobao .boughtBaobei{
+    padding-top: 5px;
+    height: 25px;
+}
+nav.topBar .myTaobao .soldBaobei{
+    height: 30px;
+    padding-bottom: 10px;
+}
+
 
 /*首页搜索框************************************************************************/
 .search-input{
