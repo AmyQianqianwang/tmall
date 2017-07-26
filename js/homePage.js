@@ -22,14 +22,14 @@ $(".title-right span").mouseleave(function () {
 
 // *商品分类菜单和列表显示隐藏特效**************************************************************
 function showCategoryRightDetail(cid){
-    // $(".categoryMenuItem[cid="+cid+"]").css("background-color","white");
-    // $(".categoryMenuItem[cid="+cid+"] a").css("color","#e54077");
+    $(".categoryMenuItem[cid="+cid+"]").css("background-color","white");
+    $(".categoryMenuItem[cid="+cid+"] a").css("color","#e54077");
     $(".category-menu-right[cid="+cid+"]").show();
 } 
-// 能用css实现的样式切换，就不用js了。这种用hover就行。。
+// 还是要在这里面用js。否则鼠标移到右面panel的时候，左面的白底和字体hover颜色就变没了。 
 function hideCategoryRightDetail(cid){
-    // $(".categoryMenuItem[cid="+cid+"]").css("background-color","#e2e2e3");
-    // $(".categoryMenuItem[cid="+cid+"] a").css("color","#000");
+    $(".categoryMenuItem[cid="+cid+"]").css("background-color","#e2e2e3");
+    $(".categoryMenuItem[cid="+cid+"] a").css("color","#000");
     $(".category-menu-right[cid="+cid+"]").hide();
 }
 $(function(){

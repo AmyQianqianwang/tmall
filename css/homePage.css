@@ -244,7 +244,7 @@ img.catear {
     text-align: center;
 }
 .longBlock img{
-    width: 1260px;
+    max-width: 1260px;
 }
 /*六大分类图片列表************************************************************************/
 .image-categoryList{
